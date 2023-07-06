@@ -1,0 +1,180 @@
+@import url("https://fonts.google.com/specimen/Roboto");
+$Dark-Slate-Grey: hsl(234, 29%, 20%);
+$Charcoal-Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+$primary: hsl(4, 100%, 67%);
+$Tomato: hsl(4, 100%, 67%);
+
+
+
+body {
+ 
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    overflow-y:auto;
+    background-color: $Charcoal-Grey;
+    @media only screen and (min-width: 300px) and (max-width: 900px){
+        background-color: $White;
+        overflow-y: scroll;
+    }
+               
+    h1 {
+        align-self: center;
+        font-size:50px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+
+    .signup {
+  
+        
+        .image-container{
+            padding: 25px;
+            
+            img{
+                height: 100%;
+                content: url(../../images/illustration-sign-up-desktop.svg);
+               
+            }
+
+            @media only screen  and (max-width: 900px){
+                padding: 0;
+                content: url(../../images/illustration-sign-up-mobile.svg);
+            }
+           
+        }
+
+        .signup-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            -webkit-border-radius: 20px;
+            padding: 30px;
+            width: 350px;
+
+
+            ul {
+                padding-left: 4px;
+                margin: 0;
+                li {
+                    margin: 5px;
+                    font-size: 0.8em;
+                    background: url("../../images/icon-list.svg") no-repeat left top; /* <-- change `left` & `top` too for extra control */
+                    padding: 3px 0px 3px 30px;
+                    /* reset styles (optional): */
+                    list-style: none;
+            
+                }
+            }
+            .input-signup{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                input[type=text] {
+                    border-radius: 5px;
+                    height: 40px;
+                    border: none;
+                    padding-left: 1em;
+                    border:solid 1px #ccc;
+
+                }
+                label{
+                    font-size: 9px;
+                    padding: 3px;
+                    font-weight: 700;
+                    margin-top: 40px;
+                    margin-bottom: 4px;
+                }
+    
+               
+
+            
+        }
+    }
+
+ 
+}
+
+
+
+    .center {
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen  and (max-width: 900px){
+            height: 100dvh;
+        }
+    }
+
+    .split {
+        display: flex;
+        height: 600px;
+        @media only screen  and (max-width: 900px){
+            justify-content: center;
+            height: 100%;
+            flex-direction: column-reverse;
+            margin: auto;
+        }
+    }
+
+    .card{
+        border-radius: 20px;
+        background-color: $White;
+        color: $Dark-Slate-Grey;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    }
+
+    .success-card{
+        width: 400px;
+        height: 400px;
+
+        background-color: $White;
+        padding: 30px;
+        @media only screen  and (max-width: 900px){
+            height: 100%;
+            padding-top: 100px;
+        }
+
+        input{
+            width: 100%;
+        }
+    }
+
+    .button {
+        height: 45px;
+        border: none;
+        color: $White;
+        background-color: $Dark-Slate-Grey;
+        border-radius: 6px;
+        font-weight: 700;
+        margin-top: 15px;
+    
+    }
+ 
+    .button:hover{
+        position: relative;
+        top: -1px;
+        text-shadow: 0 0 5px rgba(205, 215, 129, 0.5);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-image: linear-gradient(
+            80deg,
+            hsl(347deg 100% 66%) 0%,
+            hsl(350deg 100% 66%) 26%,
+            hsl(353deg 100% 66%) 39%,
+            hsl(356deg 100% 67%) 50%,
+            hsl(358deg 100% 67%) 61%,
+            hsl(1deg 100% 67%) 74%,
+            hsl(4deg 100% 67%) 100%
+          );
+        cursor: pointer;
+    }
+    .error{
+        color: $White;
+        background-color: rgb(255, 135, 135);
+    }
+}   
